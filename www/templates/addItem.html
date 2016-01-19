@@ -1,36 +1,59 @@
 <ion-view title="Add Item">
-    <ion-content overflow-scroll="true" padding="true" class="has-header has-footer">
+    <ion-content overflow-scroll="true" padding="true" class="has-header">
         <p>Please enter the product ID or the URL of the product page</p>
 
-        <form>
+        <form ng-submit="vm.addItem()">
 
           <div class="button-bar">
-              <button class="button button-dark button-block ">Product ID</button>
-              <button class="button  button-block ">Product URL</button>
+              <button class="button button-block" ng-class="{ 'button-dark': vm.addItem.productSrc == 'ID' }" ng-click="vm.addItem.productSrc = 'ID'">Product ID</button>
+              <button class="button button-block" ng-class="{ 'button-dark': vm.addItem.productSrc == 'URL' }" ng-click="vm.addItem.productSrc = 'URL'">Product URL</button>
           </div>
 
           <div class="list">
               <label class="item item-input" name="product-id">
-                  <span class="input-label">ID</span>
-                  <input type="text" placeholder="Product ID">
+                  <input type="text" placeholder="Product {{vm.productSrc}}" ng-model="vm.addItem.product">
               </label>
-              <ion-checkbox name="track-sales">Notify me with sales</ion-checkbox>
-              <ion-checkbox name="track-stock">Notify me when in stock</ion-checkbox>
+              <ion-checkbox name="track-sales" ng-model="vm.addItem.notifySales">Notify me with sales</ion-checkbox>
+              <ion-checkbox name="track-stock" ng-model="vm.addItem.notifyStock">Notify me when in stock</ion-checkbox>
           </div>
 
           <div class="spacer"></div>
 
           <p>Please select the retailer of your product</p>
 
-          <img src="img/WT3HhE0LTEaXbaaf2gXu_NEW-LOGO-SEPT-14.jpg" width="46%" height="auto" style="width: 46%; height: auto;">
-          <img src="img/hrGMlYSVSpiFqVJfxKgF_john_lewis_logo.jpg" width="46%" height="auto" style="width: 46%; height: auto;">
+          <div class="row retailers" ng-class="{ unselected: !vm.addItem.retailer }">
+            <div class="col col-50">
+              <label>
+                <input type="radio" class="hide" name="retailer" value="mns" ng-model="vm.addItem.retailer" />
+                <img src="img/WT3HhE0LTEaXbaaf2gXu_NEW-LOGO-SEPT-14.jpg" />
+              </label>
+            </div>
+            <div class="col col-50">
+              <label>
+                <input type="radio" class="hide" name="retailer" value="johnlewis" ng-model="vm.addItem.retailer" />
+                <img src="img/hrGMlYSVSpiFqVJfxKgF_john_lewis_logo.jpg" />
+              </label>
+            </div>
+          </div>
 
           <div class="spacer"></div>
 
-          <img src="img/YH9av9qKTOF6nZncBy4J_asos.jpg" width="46%" height="auto" style="width: 46%; height: auto;">
-          <img src="img/QGSYBUXLSBSqIhocAjIa_next.jpg" width="46%" height="auto" style="width: 46%; height: auto;">
+          <div class="row retailers" ng-class="{ unselected: !vm.addItem.retailer }">
+            <div class="col col-50">
+              <label>
+                <input type="radio" class="hide" name="retailer" value="asos" ng-model="vm.addItem.retailer" />
+                <img src="img/YH9av9qKTOF6nZncBy4J_asos.jpg" />
+              </label>
+            </div>
+            <div class="col col-50">
+              <label>
+                <input type="radio" class="hide" name="retailer" value="next" ng-model="vm.addItem.retailer" />
+                <img src="img/QGSYBUXLSBSqIhocAjIa_next.jpg" />
+              </label>
+            </div>
+          </div>
 
-          <button class="button button-dark button-block  button-full">Add me!</button>
+          <button type="submit" class="button button-dark button-block button-full">Add me!</button>
 
         </form>
 

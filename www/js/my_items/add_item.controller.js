@@ -15,4 +15,18 @@ function AddItemCtrl() {
 
 	var vm = this;
 
+	vm.addItem = {
+		product: '',
+		productSrc: 'ID',
+		notifySales: true,
+		notifyStock: false,
+		retailer: 'mns'
+	};
+
+	vm.addItem = addItem;
+
+	function addItem() {
+		console.log('popo');
+	}
+
 }

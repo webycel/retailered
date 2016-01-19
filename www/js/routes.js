@@ -11,7 +11,8 @@ retaileredApp.config(function($stateProvider, $urlRouterProvider) {
       views: {
         'add_item_tab': {
           templateUrl: 'templates/addItem.html',
-          controller: 'AddItemCtrl'
+          controller: 'AddItemCtrl',
+          controllerAs: 'vm'
         }
       }
     })
