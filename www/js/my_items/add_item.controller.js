@@ -9,8 +9,10 @@
  */
 retaileredApp.controller('AddItemCtrl', AddItemCtrl);
 
-AddItemCtrl.$inject = ['$scope'];
+AddItemCtrl.$inject = [];
 
-function AddItemCtrl($scope) {
-	console.log('toto');
+function AddItemCtrl() {
+
+	var vm = this;
+
 }

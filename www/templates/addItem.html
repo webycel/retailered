@@ -1,30 +1,38 @@
 <ion-view title="Add Item">
     <ion-content overflow-scroll="true" padding="true" class="has-header has-footer">
-        <div>
-            <p>Please enter the product ID or the URL of the product page</p>
-        </div>
-        <div class="button-bar">
-            <button class="button button-dark button-block ">Product ID</button>
-            <button class="button  button-block ">Product URL</button>
-        </div>
-        <form class="list">
-            <label class="item item-input" name="product-id">
-                <span class="input-label">ID</span>
-                <input type="text" placeholder="Product ID">
-            </label>
-            <ion-checkbox name="track-sales">Notify me with sales</ion-checkbox>
-            <ion-checkbox name="track-stock">Notify me when in stock</ion-checkbox>
-            <div class="spacer" style="width: 285px; height: 15px;"></div>
+        <p>Please enter the product ID or the URL of the product page</p>
+
+        <form>
+
+          <div class="button-bar">
+              <button class="button button-dark button-block ">Product ID</button>
+              <button class="button  button-block ">Product URL</button>
+          </div>
+
+          <div class="list">
+              <label class="item item-input" name="product-id">
+                  <span class="input-label">ID</span>
+                  <input type="text" placeholder="Product ID">
+              </label>
+              <ion-checkbox name="track-sales">Notify me with sales</ion-checkbox>
+              <ion-checkbox name="track-stock">Notify me when in stock</ion-checkbox>
+          </div>
+
+          <div class="spacer"></div>
+
+          <p>Please select the retailer of your product</p>
+
+          <img src="img/WT3HhE0LTEaXbaaf2gXu_NEW-LOGO-SEPT-14.jpg" width="46%" height="auto" style="width: 46%; height: auto;">
+          <img src="img/hrGMlYSVSpiFqVJfxKgF_john_lewis_logo.jpg" width="46%" height="auto" style="width: 46%; height: auto;">
+
+          <div class="spacer"></div>
+
+          <img src="img/YH9av9qKTOF6nZncBy4J_asos.jpg" width="46%" height="auto" style="width: 46%; height: auto;">
+          <img src="img/QGSYBUXLSBSqIhocAjIa_next.jpg" width="46%" height="auto" style="width: 46%; height: auto;">
+
+          <button class="button button-dark button-block  button-full">Add me!</button>
+
         </form>
-        <div>
-            <p>Please select the retailer of your product</p>
-        </div>
-        <img src="img/WT3HhE0LTEaXbaaf2gXu_NEW-LOGO-SEPT-14.jpg" width="46%" height="auto" style="width: 46%; height: auto;">
-        <img src="img/hrGMlYSVSpiFqVJfxKgF_john_lewis_logo.jpg" width="46%" height="auto" style="width: 46%; height: auto;">
-        <div class="spacer" style="width: 285px; height: 18px;"></div>
-        <img src="img/YH9av9qKTOF6nZncBy4J_asos.jpg" width="46%" height="auto" style="width: 46%; height: auto;">
-        <img src="img/QGSYBUXLSBSqIhocAjIa_next.jpg" width="46%" height="auto" style="width: 46%; height: auto;">
-        <ion-list></ion-list>
-        <button class="button button-dark button-block  button-full">Add me!</button>
+
     </ion-content>
 </ion-view>
