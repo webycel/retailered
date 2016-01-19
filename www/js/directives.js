@@ -1,0 +1,3 @@
+retaileredApp.directive('blankDirective', [function(){
+
+}]);
